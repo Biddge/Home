@@ -724,4 +724,70 @@ html[data-theme="dark"] .app-bg {
     height: 90px;
   }
 }
+/* =========================
+   MOBILE NAV – FINAL FIX
+========================= */
+@media (max-width: 768px) {
+
+  nav {
+    height: 64px;
+  }
+
+  .nav-inner {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* LEFT */
+  .nav-left {
+    flex: 1;
+  }
+
+  .nav-left a:not(.brand) {
+    display: none;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  /* CENTER SEARCH */
+  .nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-search {
+    width: 100%;
+    max-width: 180px;
+    font-size: 14px;
+  }
+
+  /* RIGHT */
+  .nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hide extras */
+  .nav-lang,
+  .theme-text {
+    display: none;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: block;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
 
