@@ -324,11 +324,7 @@ html[data-theme="dark"] .theme-icon {
     display: flex;
   }
 
-   @media (max-width: 768px) {
-  .nav-inner {
-    padding: 14px 20px;
-  }
-}
+   
 
 
   /* Show hamburger */
@@ -617,5 +613,6 @@ html[data-theme="dark"] .app-bg {
   height: 18px;
   fill: currentColor;
 }
+
 
 
