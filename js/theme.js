@@ -17,3 +17,7 @@ function toggleTheme() {
     localStorage.setItem("theme", "dark");
   }
 }
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("show");
+}
+
