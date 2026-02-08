@@ -307,25 +307,55 @@ main {
 
 @media (max-width: 768px) {
 
-  .hero h1 {
-    font-size: 34px;
+  /* NAVBAR SPACING */
+  .nav-inner {
+    padding: 12px 16px;
   }
 
-  /* Hide menu links, keep brand */
-  .nav-left a:not(.brand),
+  /* HIDE SEARCH */
   .nav-center {
     display: none;
   }
 
-  .nav-left {
-    display: flex;
+  /* LEFT NAV — KEEP BRAND + IMPORTANT LINKS ONLY */
+  .nav-left a {
+    display: none;
   }
 
+  .nav-left .brand,
+  .nav-left a[href="about.html"],
+  .nav-left a[href="creator.html"],
+  .nav-left a[href="events.html"] {
+    display: inline-block;
+  }
+
+  /* RIGHT NAV — KEEP THEME + LOGIN */
+  .nav-right {
+    gap: 12px;
+  }
+
+  .nav-right .nav-icon,
+  .nav-right .nav-lang,
+  .nav-divider {
+    display: none;
+  }
+
+  .theme-toggle {
+    flex-direction: row;
+  }
+
+  .theme-text {
+    display: none; /* icon only */
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  /* HAMBURGER */
   .hamburger {
     display: block;
-  }
-
-  .hero-video {
-    max-width: 100%;
+    font-size: 20px;
   }
 }
+
