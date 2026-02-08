@@ -21,3 +21,8 @@ function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("show");
 }
 
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("show");
+}
+
