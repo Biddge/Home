@@ -854,6 +854,16 @@ html[data-theme="dark"] .app-bg {
   .theme-text {
     display: none !important;
   }
+   /* HAMBURGER VISIBILITY FIX */
+.hamburger {
+  color: var(--text);
+}
+
+/* Dark theme guarantee */
+html[data-theme="dark"] .hamburger {
+  color: #ffffff;
+}
+
 
  /* FORCE HAMBURGER CLICK FIX */
 @media (max-width: 768px) {
@@ -902,6 +912,23 @@ html[data-theme="dark"] .app-bg {
     margin-bottom: 20px;
     cursor: pointer;
   }
+}
+
+/* BACKDROP OVERLAY */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+}
+
+.menu-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 
