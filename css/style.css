@@ -596,7 +596,7 @@ html[data-theme="dark"] .app-bg {
   fill: currentColor;
 }
 /* =========================
-   APP SECTION – 2 ROW FLOAT
+   APP SECTION – 2 ROW FLOAT (FINAL)
 ========================= */
 
 .app-section {
@@ -624,6 +624,11 @@ html[data-theme="dark"] .app-bg {
   display: flex;
   gap: 28px;
   width: max-content;
+
+  /* loop safety */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
 }
 
 .app-bg-track img {
@@ -635,16 +640,16 @@ html[data-theme="dark"] .app-bg {
 
 /* DIRECTIONS */
 .app-bg-track.left {
-  animation: float-left linear infinite;
+  animation-name: float-left;
 }
 
 .app-bg-track.right {
-  animation: float-right linear infinite;
+  animation-name: float-right;
 }
 
-/* SPEED (FASTER) */
+/* SPEED (CHANGE ONLY THIS TO CONTROL SPEED) */
 .app-bg-track.fast {
-  animation-duration: 16s; /* faster */
+  animation-duration: 16s; /* 🔥 faster loop */
 }
 
 /* CENTER CONTENT */
@@ -676,6 +681,7 @@ html[data-theme="dark"] .app-bg {
 .phone-frame img {
   width: 100%;
   border-radius: 26px;
+  display: block;
 }
 
 /* TEXT */
@@ -702,15 +708,15 @@ html[data-theme="dark"] .app-bg {
   backdrop-filter: blur(6px);
 }
 
-/* ANIMATIONS */
+/* ANIMATIONS (DO NOT CHANGE -50%) */
 @keyframes float-left {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to   { transform: translateX(-50%); }
 }
 
 @keyframes float-right {
   from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  to   { transform: translateX(0); }
 }
 
 /* MOBILE */
@@ -724,6 +730,7 @@ html[data-theme="dark"] .app-bg {
     height: 90px;
   }
 }
+
 /* =========================
    MOBILE NAV – FINAL FIX
 ========================= */
@@ -858,6 +865,7 @@ html[data-theme="dark"] .app-bg {
     z-index: 1000;
   }
 }
+
 
 
 
