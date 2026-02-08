@@ -307,14 +307,36 @@ html[data-theme="dark"] .theme-icon {
    MOBILE
 ========================= */
 @media (max-width: 768px) {
+
+  /* Hero text */
   .hero h1 {
     font-size: 34px;
   }
 
-  .nav-left,
+  /* Hide menu links, NOT brand */
+  .nav-left a:not(.brand),
   .nav-center {
     display: none;
   }
+
+  /* Keep brand visible */
+  .nav-left {
+    display: flex;
+  }
+
+   @media (max-width: 768px) {
+  .nav-inner {
+    padding: 14px 20px;
+  }
+}
+
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+}
+
 
   .hamburger {
     display: block;
@@ -595,4 +617,5 @@ html[data-theme="dark"] .app-bg {
   height: 18px;
   fill: currentColor;
 }
+
 
