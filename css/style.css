@@ -1,7 +1,6 @@
 /* =========================
    THEME VARIABLES
 ========================= */
-
 :root {
   --bg: #ffffff;
   --text: #000000;
@@ -20,9 +19,8 @@ html[data-theme="dark"] {
 }
 
 /* =========================
-   GLOBAL RESET
+   RESET
 ========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -36,9 +34,8 @@ body {
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (DESKTOP)
 ========================= */
-
 nav {
   position: fixed;
   top: 0;
@@ -105,11 +102,11 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--text);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  color: var(--text);
 }
 
 .theme-icon {
@@ -135,17 +132,15 @@ html[data-theme="dark"] .theme-icon {
 }
 
 /* =========================
-   MAIN LAYOUT
+   LAYOUT
 ========================= */
-
 main {
   padding-top: 90px;
 }
 
 /* =========================
-   HERO SECTION
+   HERO
 ========================= */
-
 .hero {
   position: relative;
   z-index: 2;
@@ -157,14 +152,14 @@ main {
 
 .hero h1 {
   font-size: 52px;
-  color: #ffffff;
+  color: #fff;
   line-height: 1.1;
 }
 
 .hero p {
   margin-top: 16px;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255,255,255,0.85);
 }
 
 .hero-actions {
@@ -182,35 +177,32 @@ main {
 }
 
 .btn.primary {
-  background: #ffffff;
+  background: #fff;
   color: #3b0a57;
   font-weight: 600;
 }
 
 .btn.secondary {
   border: 1px solid rgba(255,255,255,0.7);
-  color: #ffffff;
+  color: #fff;
 }
 
-/* HERO VIDEO (COMPACT FIX) */
 .hero-video {
   margin: 40px auto 0;
   max-width: 900px;
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 30px 80px rgba(0,0,0,.45);
 }
 
 .hero-video video {
   width: 100%;
-  height: auto;
   display: block;
 }
 
 /* =========================
-   COMMUNITIES SECTION
+   COMMUNITIES
 ========================= */
-
 .communities {
   position: relative;
   isolation: isolate;
@@ -236,13 +228,8 @@ main {
   width: max-content;
 }
 
-.row-1 {
-  animation: scroll-left 50s linear infinite;
-}
-
-.row-2 {
-  animation: scroll-right 35s linear infinite;
-}
+.row-1 { animation: scroll-left 50s linear infinite; }
+.row-2 { animation: scroll-right 35s linear infinite; }
 
 .community-slider:hover .community-track {
   animation-play-state: paused;
@@ -254,11 +241,6 @@ main {
   border-radius: 18px;
   background: var(--card-bg);
   border: 1px solid var(--border);
-  transition: transform 0.25s ease;
-}
-
-.community-card:hover {
-  transform: translateY(-4px);
 }
 
 .community-card h3 {
@@ -282,9 +264,8 @@ main {
 }
 
 /* =========================
-   APP DOWNLOAD SECTION (FIXED)
+   APP SECTION
 ========================= */
-
 .app-section {
   padding: 100px 20px;
   text-align: center;
@@ -294,7 +275,7 @@ main {
 }
 
 .app-preview {
-  max-width: 300px;   /* 🔑 THIS FIXES BIG IMAGE */
+  max-width: 300px;
   width: 100%;
   height: auto;
   margin: 0 auto 30px;
@@ -302,26 +283,25 @@ main {
 }
 
 /* =========================
-   MOBILE STYLES
+   MOBILE NAVBAR (FINAL)
 ========================= */
-
 @media (max-width: 768px) {
 
-  /* NAVBAR SPACING */
   .nav-inner {
     padding: 12px 16px;
   }
 
-  /* HIDE SEARCH */
+  /* Hide search */
   .nav-center {
     display: none;
   }
 
-  /* LEFT NAV — KEEP BRAND + IMPORTANT LINKS ONLY */
+  /* Reset left links */
   .nav-left a {
     display: none;
   }
 
+  /* Show only required links */
   .nav-left .brand,
   .nav-left a[href="about.html"],
   .nav-left a[href="creator.html"],
@@ -329,33 +309,38 @@ main {
     display: inline-block;
   }
 
-  /* RIGHT NAV — KEEP THEME + LOGIN */
-  .nav-right {
-    gap: 12px;
+  .nav-left {
+    display: flex;
+    gap: 14px;
+    align-items: center;
   }
 
+  /* Right side cleanup */
   .nav-right .nav-icon,
   .nav-right .nav-lang,
   .nav-divider {
     display: none;
   }
 
-  .theme-toggle {
-    flex-direction: row;
-  }
-
   .theme-text {
-    display: none; /* icon only */
+    display: none;
   }
 
-  .nav-link {
-    font-size: 14px;
+  .nav-right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
   }
 
-  /* HAMBURGER */
   .hamburger {
     display: block;
-    font-size: 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-video {
+    max-width: 100%;
   }
 }
-
