@@ -36,4 +36,22 @@ function toggleMenu() {
   menu.classList.toggle("show");
 }
 
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
+
+  menu.classList.toggle("show");
+  overlay.classList.toggle("show");
+}
+
+function closeMenu() {
+  document.getElementById("mobileMenu").classList.remove("show");
+  document.getElementById("menuOverlay").classList.remove("show");
+}
+
+/* prevent JS crash from search */
+function liveSearch(value) {
+  console.log(value);
+}
+
 
